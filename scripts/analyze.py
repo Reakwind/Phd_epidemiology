@@ -41,13 +41,22 @@ def export_to_docx(
 
 
 def main(csv_file: str, output_dir: str) -> None:
+    """Run the analysis pipeline on `csv_file` and save outputs."""
+    if not os.path.isfile(csv_file):
+        raise FileNotFoundError(csv_file)
+
+    os.makedirs(output_dir, exist_ok=True)
+
     df = load_data(csv_file)
     df = clean_data(df)
     summary = analyze_data(df)
+
     figure_path = os.path.join(output_dir, "figure.png")
     generate_visualization(df, figure_path)
+
     docx_path = os.path.join(output_dir, "report.docx")
     export_to_docx(summary, figure_path, docx_path)
+
     print(f"Report saved to {docx_path}")
 
 
