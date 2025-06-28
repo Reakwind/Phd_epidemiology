@@ -19,13 +19,20 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
+The `requirements.txt` file lists the core packages:
+
+- pandas
+- matplotlib
+- python-docx
+
 ## Usage
 
 Run the analysis script on a CSV file. The script is tailored for tabular
 medical research data where each row represents a patient and columns contain
 demographic, medical, or cognitive measurements. It cleans the data,
-computes summary statistics, creates histograms for numeric variables, and
-writes everything to a docx file.
+computes summary statistics, generates histograms for numeric variables and
+bar charts for categorical variables, and writes the results to a docx file
+with nicely formatted tables.
 
 ```bash
 python scripts/analyze.py path/to/data.csv output_directory
