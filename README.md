@@ -45,3 +45,15 @@ Example using the provided sample dataset:
 ```bash
 python scripts/analyze.py data/sample.csv output
 ```
+
+## Web interface
+
+A simple Next.js app in `web/` lets you upload CSV files and download a generated report.
+
+```bash
+cd web
+npm install
+npm run dev
+```
+
+Open `http://localhost:3000` and upload a CSV file to run the analysis and download `report.docx`.
