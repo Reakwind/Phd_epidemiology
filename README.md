@@ -21,12 +21,20 @@ pip install -r requirements.txt
 
 ## Usage
 
-Run the analysis script on a CSV file. The script cleans the data, generates
-summary statistics and a simple visualization, and writes everything to a docx
-file.
+Run the analysis script on a CSV file. The script is tailored for tabular
+medical research data where each row represents a patient and columns contain
+demographic, medical, or cognitive measurements. It cleans the data,
+computes summary statistics, creates histograms for numeric variables, and
+writes everything to a docx file.
 
 ```bash
 python scripts/analyze.py path/to/data.csv output_directory
 ```
 
 The resulting `report.docx` will appear in `output_directory`.
+
+Example using the provided sample dataset:
+
+```bash
+python scripts/analyze.py data/sample.csv output
+```
