@@ -77,10 +77,9 @@ install.packages(c("shiny", "DBI", "RSQLite", "ggplot2", "dplyr", "shinythemes",
 7. **Enhanced UI**: Professional styling with wellPanels and improved layout
 8. **Error Handling**: Robust database connection error handling and input validation
 
-### Enhanced Files
-- `app.R` - Original application
-- `app_enhanced_simple.R` - Enhanced version with new features (recommended)
-- `app_enhanced.R` - Full enhanced version with correlation matrix (has dependency issues)
+### Current Files
+- `app.R` - Main enhanced application (recommended version with all features)
+- `app_basic.R` - Basic version backup (fallback if needed)
 
 ### Additional Dependencies for Enhanced Version
 ```r
@@ -94,15 +93,16 @@ install.packages(c("DT", "corrplot", "tidyr"))
 - **Enhanced Filtering**: Gender and age range filters applied across analyses
 
 ### Usage Recommendations
-- Use `app_enhanced_simple.R` for most enhanced features without correlation matrix issues
+- Use `app.R` as the main application (enhanced version with all features)
+- Use `app_basic.R` only as a fallback if the main version has issues
 - The enhanced version includes autocomplete search, statistical summaries, and data export
 - All visualizations are now downloadable as high-resolution PNG files
 - Filtered datasets can be exported as CSV files for further analysis
 
 ## File Structure
-- `app.R` - Original Shiny application
-- `app_enhanced_simple.R` - Enhanced version with new features (recommended)
-- `app_enhanced.R` - Full enhanced version (may have dependency issues)
+- `app.R` - Main enhanced Shiny application (current version)
+- `app_basic.R` - Basic version backup
 - `780_database.db` - SQLite database with clinical data
 - `780_database.sqbpro` - SQLiteStudio project file
-- `rsconnect/` - Deployment configuration (if deploying to RStudio Connect/shinyapps.io)
+- `rsconnect/` - Deployment configuration for shinyapps.io
+- `.gitignore` - Git ignore file for R/Shiny projects
