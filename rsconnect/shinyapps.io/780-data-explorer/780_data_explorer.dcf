@@ -1,0 +1,10 @@
+name: 780_data_explorer
+title: 780_data_explorer
+username: 780-data-explorer
+account: 780-data-explorer
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 15540936
+bundleId: 10944354
+url: https://780-data-explorer.shinyapps.io/780_data_explorer/
+version: 1
